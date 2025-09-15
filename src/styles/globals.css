@@ -1,26 +1,238 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* Primary */
+  --color-primary-100: #D5D6D9;
+  --color-primary-200: #AAADB2;
+  --color-primary-300: #80848C;
+  --color-primary-400: #555B65;
+  --color-primary-500: #2B323F;
+  --color-primary-600: #252A36;
+  --color-primary-700: #1E232C;
+  --color-primary-800: #181C23;
+
+  /* Secondary */
+  --color-secondary-100: #D1E7EA;
+  --color-secondary-200: #A2CFD5;
+  --color-secondary-300: #74B6C0;
+  --color-secondary-400: #459EAB;
+  --color-secondary-500: #178696;
+  --color-secondary-600: #147280;
+  --color-secondary-700: #105E69;
+  --color-secondary-800: #0D4A52;
+
+  /* Foregrounds e background */
+  --color-primary-foreground: #fafafa;
+  --color-secondary-foreground: #fafafa;
+  --color-background: #fafafa;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+:root, .light, .light-theme {
+  --grayblue-1: #f7f7f9;
+  --grayblue-2: #f1f3f6;
+  --grayblue-3: #e5ebf5;
+  --grayblue-4: #d9e1f1;
+  --grayblue-5: #cdd7e9;
+  --grayblue-6: #bfcbdf;
+  --grayblue-7: #aebad0;
+  --grayblue-8: #96a3ba;
+  --grayblue-9: #2b323f;
+  --grayblue-10: #3d4552;
+  --grayblue-11: #59657a;
+  --grayblue-12: #2f3643;
+
+  --grayblue-a1: #3b3bbb04;
+  --grayblue-a2: #1548940a;
+  --grayblue-a3: #074dc116;
+  --grayblue-a4: #033fb722;
+  --grayblue-a5: #01389c2e;
+  --grayblue-a6: #04368a3d;
+  --grayblue-a7: #0128704e;
+  --grayblue-a8: #00215a66;
+  --grayblue-a9: #010a19d4;
+  --grayblue-a10: #000b1cc1;
+  --grayblue-a11: #021435a5;
+  --grayblue-a12: #010a1ad0;
+
+  --grayblue-contrast: #fff;
+  --grayblue-surface: #eff1f5cc;
+  --grayblue-indicator: #2b323f;
+  --grayblue-track: #2b323f;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@supports (color: color(display-p3 1 1 1)) {
+  @media (color-gamut: p3) {
+    :root, .light, .light-theme {
+      --grayblue-1: oklch(97.7% 0.0019 262.7);
+      --grayblue-2: oklch(96.4% 0.0047 262.7);
+      --grayblue-3: oklch(93.8% 0.0149 262.7);
+      --grayblue-4: oklch(90.9% 0.0224 262.7);
+      --grayblue-5: oklch(87.7% 0.0275 262.7);
+      --grayblue-6: oklch(83.9% 0.0315 262.7);
+      --grayblue-7: oklch(78.6% 0.0349 262.7);
+      --grayblue-8: oklch(71.2% 0.0379 262.7);
+      --grayblue-9: oklch(31.6% 0.0253 262.7);
+      --grayblue-10: oklch(38.8% 0.0253 262.7);
+      --grayblue-11: oklch(50.4% 0.0379 262.7);
+      --grayblue-12: oklch(33.2% 0.0253 262.7);
+
+      --grayblue-a1: color(display-p3 0 0 0.6549 / 0.012);
+      --grayblue-a2: color(display-p3 0 0.2196 0.5451 / 0.036);
+      --grayblue-a3: color(display-p3 0 0.2471 0.6863 / 0.08);
+      --grayblue-a4: color(display-p3 0 0.2157 0.6745 / 0.128);
+      --grayblue-a5: color(display-p3 0 0.1843 0.549 / 0.172);
+      --grayblue-a6: color(display-p3 0 0.1725 0.4824 / 0.228);
+      --grayblue-a7: color(display-p3 0 0.1333 0.4 / 0.296);
+      --grayblue-a8: color(display-p3 0 0.1137 0.3216 / 0.392);
+      --grayblue-a9: color(display-p3 0 0.0275 0.0863 / 0.824);
+      --grayblue-a10: color(display-p3 0 0.0314 0.0941 / 0.748);
+      --grayblue-a11: color(display-p3 0 0.0627 0.1804 / 0.636);
+      --grayblue-a12: color(display-p3 0 0.0314 0.0863 / 0.808);
+
+      --grayblue-contrast: #fff;
+      --grayblue-surface: color(display-p3 0.9412 0.9451 0.9608 / 0.8);
+      --grayblue-indicator: oklch(31.6% 0.0253 262.7);
+      --grayblue-track: oklch(31.6% 0.0253 262.7);
+    }
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+:root, .light, .light-theme {
+  --teal-1: #f5f8f8;
+  --teal-2: #eef4f5;
+  --teal-3: #ddeff2;
+  --teal-4: #cce8ed;
+  --teal-5: #badfe6;
+  --teal-6: #a6d3db;
+  --teal-7: #8ac3cd;
+  --teal-8: #5dadbb;
+  --teal-9: #178696;
+  --teal-10: #007988;
+  --teal-11: #007686;
+  --teal-12: #1b3b41;
+
+  --teal-a1: #26a5a506;
+  --teal-a2: #0f85980d;
+  --teal-a3: #049db61e;
+  --teal-a4: #0199b42f;
+  --teal-a5: #0392ad42;
+  --teal-a6: #01869e56;
+  --teal-a7: #02819773;
+  --teal-a8: #028197a1;
+  --teal-a9: #007a8ce8;
+  --teal-a10: #007988;
+  --teal-a11: #007686;
+  --teal-a12: #01252ce4;
+
+  --teal-contrast: #fff;
+  --teal-surface: #ebf3f4cc;
+  --teal-indicator: #178696;
+  --teal-track: #178696;
+}
+
+@supports (color: color(display-p3 1 1 1)) {
+  @media (color-gamut: p3) {
+    :root, .light, .light-theme {
+      --teal-1: oklch(97.6% 0.0027 210.2);
+      --teal-2: oklch(96.3% 0.0066 210.2);
+      --teal-3: oklch(94% 0.0195 210.2);
+      --teal-4: oklch(91.2% 0.0304 210.2);
+      --teal-5: oklch(87.9% 0.0397 210.2);
+      --teal-6: oklch(83.7% 0.0487 210.2);
+      --teal-7: oklch(78.1% 0.0603 210.2);
+      --teal-8: oklch(70.3% 0.0811 210.2);
+      --teal-9: oklch(57% 0.0937 210.2);
+      --teal-10: oklch(52.5% 0.0937 210.2);
+      --teal-11: oklch(51.7% 0.0937 210.2);
+      --teal-12: oklch(33.2% 0.039 210.2);
+
+      --teal-a1: color(display-p3 0 0.4902 0.4902 / 0.016);
+      --teal-a2: color(display-p3 0 0.4471 0.5373 / 0.044);
+      --teal-a3: color(display-p3 0 0.5294 0.6431 / 0.104);
+      --teal-a4: color(display-p3 0 0.5294 0.6471 / 0.164);
+      --teal-a5: color(display-p3 0 0.502 0.6196 / 0.228);
+      --teal-a6: color(display-p3 0 0.4588 0.5647 / 0.3);
+      --teal-a7: color(display-p3 0 0.4235 0.5216 / 0.4);
+      --teal-a8: color(display-p3 0 0.4157 0.5176 / 0.548);
+      --teal-a9: color(display-p3 0 0.3608 0.4471 / 0.748);
+      --teal-a10: color(display-p3 0 0.3333 0.4078 / 0.792);
+      --teal-a11: color(display-p3 0 0.3255 0.4039 / 0.8);
+      --teal-a12: color(display-p3 0 0.1059 0.1333 / 0.86);
+
+      --teal-contrast: #fff;
+      --teal-surface: color(display-p3 0.9255 0.9529 0.9569 / 0.8);
+      --teal-indicator: oklch(57% 0.0937 210.2);
+      --teal-track: oklch(57% 0.0937 210.2);
+    }
+  }
+}
+
+.radix-themes[data-accent-color="grayblue"] {
+  --accent-1: var(--grayblue-1);
+  --accent-2: var(--grayblue-2);
+  --accent-3: var(--grayblue-3);
+  --accent-4: var(--grayblue-4);
+  --accent-5: var(--grayblue-5);
+  --accent-6: var(--grayblue-6);
+  --accent-7: var(--grayblue-7);
+  --accent-8: var(--grayblue-8);
+  --accent-9: var(--grayblue-9);
+  --accent-10: var(--grayblue-10);
+  --accent-11: var(--grayblue-11);
+  --accent-12: var(--grayblue-12);
+
+  --accent-a1: var(--grayblue-a1);
+  --accent-a2: var(--grayblue-a2);
+  --accent-a3: var(--grayblue-a3);
+  --accent-a4: var(--grayblue-a4);
+  --accent-a5: var(--grayblue-a5);
+  --accent-a6: var(--grayblue-a6);
+  --accent-a7: var(--grayblue-a7);
+  --accent-a8: var(--grayblue-a8);
+  --accent-a9: var(--grayblue-a9);
+  --accent-a10: var(--grayblue-a10);
+  --accent-a11: var(--grayblue-a11);
+  --accent-a12: var(--grayblue-a12);
+
+  --accent-contrast: var(--grayblue-contrast);
+  --accent-surface: var(--grayblue-surface);
+  --accent-indicator: var(--grayblue-indicator);
+  --accent-track: var(--grayblue-track);
+}
+
+.radix-themes[data-accent-color="teal"] {
+  --accent-1: var(--teal-1);
+  --accent-2: var(--teal-2);
+  --accent-3: var(--teal-3);
+  --accent-4: var(--teal-4);
+  --accent-5: var(--teal-5);
+  --accent-6: var(--teal-6);
+  --accent-7: var(--teal-7);
+  --accent-8: var(--teal-8);
+  --accent-9: var(--teal-9);
+  --accent-10: var(--teal-10);
+  --accent-11: var(--teal-11);
+  --accent-12: var(--teal-12);
+
+  --accent-a1: var(--teal-a1);
+  --accent-a2: var(--teal-a2);
+  --accent-a3: var(--teal-a3);
+  --accent-a4: var(--teal-a4);
+  --accent-a5: var(--teal-a5);
+  --accent-a6: var(--teal-a6);
+  --accent-a7: var(--teal-a7);
+  --accent-a8: var(--teal-a8);
+  --accent-a9: var(--teal-a9);
+  --accent-a10: var(--teal-a10);
+  --accent-a11: var(--teal-a11);
+  --accent-a12: var(--teal-a12);
+
+  --accent-contrast: var(--teal-contrast);
+  --accent-surface: var(--teal-surface);
+  --accent-indicator: var(--teal-indicator);
+  --accent-track: var(--teal-track);
+}
+
+:root, .light, .light-theme, .radix-themes {
+  --color-background: #fafafa;
 }
