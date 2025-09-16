@@ -26,11 +26,11 @@ export default function SobreMimPage() {
             eficiência.
           </p>
           <div className="flex gap-4 mt-2 ">
-            <Button>
+            <Button className="!cursor-pointer">
               <DoubleArrowDownIcon />
               Explore novas soluções
             </Button>
-            <Button variant="outline">
+            <Button variant="outline" className="!cursor-pointer">
               <PaperPlaneIcon />
               Compartilhar
             </Button>
