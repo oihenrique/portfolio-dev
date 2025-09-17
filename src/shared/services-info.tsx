@@ -14,7 +14,7 @@ export const servicesInfo = [
     title: "Landing Pages",
     description:
       "Criação rápida e performática de Landing pages para o seu negócio.",
-    iconPath: <RocketIcon width={20} height={20} color="#59657a" />,
+    iconPath: <RocketIcon width={20} height={20} color="#fafafa" />,
     action: handleAction,
   },
   {
@@ -22,7 +22,7 @@ export const servicesInfo = [
     title: "Desenvolvimento de software",
     description:
       "Criação de softwares para as mais diversas finalidades, como softwares de gestão, organização etc.",
-    iconPath: <CodeIcon width={20} height={20} color="#59657a" />,
+    iconPath: <CodeIcon width={20} height={20} color="#fafafa" />,
     action: handleAction,
   },
   {
@@ -30,7 +30,7 @@ export const servicesInfo = [
     title: "Bot para telegram",
     description:
       "Desenvolvimento de bots para gestão de conteúdos, assinaturas, disparo de notificações etc.",
-    iconPath: <LightningBoltIcon width={20} height={20} color="#59657a" />,
+    iconPath: <LightningBoltIcon width={20} height={20} color="#fafafa" />,
     action: handleAction,
   },
   {
@@ -38,7 +38,7 @@ export const servicesInfo = [
     title: "Automação de processos",
     description:
       "Desenvolvimento de scripts para automatizar tarefas repetitivas.",
-    iconPath: <GearIcon width={20} height={20} color="#59657a" />,
+    iconPath: <GearIcon width={20} height={20} color="#fafafa" />,
     action: handleAction,
   },
 ];

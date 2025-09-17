@@ -24,8 +24,9 @@ export default function CardServices({
        duration-200 hover:scale-[1.02] transform-gpu hover:border-primary-200/80 focus-within:ring-2
        focus-within:ring-secondary-200"
       >
-        {iconExists && iconPath}
-
+        <div className="bg-primary-500 w-fit p-2 rounded-full">
+          {iconExists && iconPath}
+        </div>
         <div>
           <h3 className="mb-1 text-base font-semibold tracking-tight text-primary-700">
             {title}
