@@ -1,10 +1,9 @@
-import { Container } from "@radix-ui/themes";
+import { Container, Dialog } from "@radix-ui/themes";
 import CardServices from "./card-services";
 import { servicesInfo } from "@/shared/services-info";
+import ServiceModal from "./service-modal";
 
 export default function ServicesSection() {
-  const services = servicesInfo;
-
   return (
     <Container>
       <section className="py-12 space-y-8">
@@ -12,14 +11,21 @@ export default function ServicesSection() {
           Serviços disponíveis
         </h2>
         <div className="grid grid-rows-1 grid-cols-4 gap-4">
-          {services.map((s) => (
-            <CardServices
-              key={s.id ?? s.title}
-              title={s.title}
-              description={s.description}
-              iconPath={s.iconPath}
-              action={s.action}
-            />
+          {servicesInfo.map((s) => (
+            <Dialog.Root key={s.id}>
+              <Dialog.Trigger>
+                <div>
+                  {" "}
+                  {/* Wrapper para o gatilho */}
+                  <CardServices
+                    title={s.title}
+                    description={s.description}
+                    iconPath={s.iconPath}
+                  />
+                </div>
+              </Dialog.Trigger>
+              <ServiceModal service={s} />
+            </Dialog.Root>
           ))}
         </div>
       </section>
