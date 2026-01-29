@@ -1,4 +1,5 @@
-import { CodeIcon, GearIcon, LightningBoltIcon } from "@radix-ui/react-icons";
+const isProd = process.env.NODE_ENV === "production";
+const prefix = isProd ? "/portfolio-dev" : "";
 
 export interface ProjectDetail {
   id: number;
@@ -22,7 +23,7 @@ export const projectsInfo: ProjectDetail[] = [
     category: "automacao",
     videoUrl: "dQw4w9WgXcQ",
     technologies: ["Python", "Pandas", "SMTP", "OpenPyXL"],
-    imagePath: "/automacao_relatorios.png",
+    imagePath: `${prefix}/automacao_relatorios.png`,
   },
   {
     id: 2,
@@ -34,7 +35,7 @@ export const projectsInfo: ProjectDetail[] = [
     category: "sistemas",
     videoUrl: "dQw4w9WgXcQ",
     technologies: ["Java", "MySQL", "Swing"],
-    imagePath: "/assets/runningProjectHotel1.gif",
+    imagePath: `${prefix}/assets/runningProjectHotel1.gif`,
   },
   {
     id: 3,
@@ -46,6 +47,6 @@ export const projectsInfo: ProjectDetail[] = [
     category: "bots",
     videoUrl: "dQw4w9WgXcQ",
     technologies: ["Python", "Playwright", "Telegram API", "SQLite", "Docker"],
-    imagePath: "/assets/telegram-bot-vagas.png",
+    imagePath: `${prefix}/assets/telegram-bot-vagas.png`,
   },
 ];

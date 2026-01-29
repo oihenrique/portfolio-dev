@@ -3,6 +3,9 @@ import { Button, Container } from "@radix-ui/themes";
 import Image from "next/image";
 import { useState } from "react";
 
+const isProd = process.env.NODE_ENV === "production";
+const prefix = isProd ? "/portfolio-dev" : "";
+
 export default function HeroSection() {
   const [copiado, setCopiado] = useState(false);
 
@@ -67,7 +70,7 @@ export default function HeroSection() {
         </div>
         <div className="max-w-2xl w-full">
           <Image
-            src="/HTC_Heritage Library_Nautical Nation 02Element 6.png"
+            src={`${prefix}/HTC_Heritage Library_Nautical Nation 02Element 6.png`}
             width={400}
             height={400}
             alt="Desenho de um farol"

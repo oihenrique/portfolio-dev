@@ -6,6 +6,9 @@ import Image from "next/image";
 import { projectsInfo } from "@/shared/projects-info";
 import ProjectModal from "./project-modal";
 
+const isProd = process.env.NODE_ENV === "production";
+const prefix = isProd ? "/portfolio-dev" : "";
+
 export default function ProjectsSection() {
   const [servicoSelecionado, setServicoSelecionado] = useState("todos");
 
@@ -74,7 +77,7 @@ export default function ProjectsSection() {
         <div className="flex items-center">
           <div className="hidden lg:block w-1/4 px-4 mr-12">
             <Image
-              src="/HTC_Heritage Library_Nautical Nation 02Element 1.png"
+              src={`${prefix}/HTC_Heritage Library_Nautical Nation 02Element 1.png`}
               width={250}
               height={250}
               alt="pedestal com livro"
