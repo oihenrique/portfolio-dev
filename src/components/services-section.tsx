@@ -5,7 +5,7 @@ import ServiceModal from "./service-modal";
 
 export default function ServicesSection() {
   return (
-    <Container>
+    <Container id="servicos" className="scroll-mt-20">
       <section className="py-12 space-y-8">
         <h2 className="text-2xl text-background text-center font-bold">
           Serviços disponíveis

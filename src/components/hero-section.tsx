@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function SobreMimPage() {
   return (
-    <Container>
+    <Container id="inicio" className="scroll-mt-20">
       <section className="flex gap-8 items-center">
         <div className="flex flex-col gap-2">
           <p className="text-lg font-medium text-gray-500">
@@ -26,10 +26,12 @@ export default function SobreMimPage() {
             eficiência.
           </p>
           <div className="flex gap-4 mt-2 ">
-            <Button className="!cursor-pointer">
-              <DoubleArrowDownIcon />
-              Explore novas soluções
-            </Button>
+            <a href="#servicos">
+              <Button className="!cursor-pointer">
+                <DoubleArrowDownIcon />
+                Explore novas soluções
+              </Button>
+            </a>
             <Button variant="outline" className="!cursor-pointer">
               <PaperPlaneIcon />
               Compartilhar

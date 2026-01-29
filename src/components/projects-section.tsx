@@ -13,7 +13,7 @@ export default function ProjectsSection() {
   const services = projectsInfo;
 
   return (
-    <Container>
+    <Container id="projetos" className="scroll-mt-20">
       <section className="pb-12 space-y-8">
         <div className="space-y-4">
           <h2 className="text-2xl text-gray-700 text-center font-bold">

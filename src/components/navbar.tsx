@@ -22,7 +22,7 @@ export default function Navbar() {
     <nav className="w-full mb-12 sticky top-0 z-50 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 border-b">
       <div className="mx-auto max-w-6xl px-4">
         <div className="flex h-14 items-center justify-between">
-          <Link href="/" className="font-semibold tracking-tight">
+          <Link href="#inicio" className="font-semibold tracking-tight">
             henrique.dev
           </Link>
 
@@ -32,7 +32,7 @@ export default function Navbar() {
               <NavigationMenuItem>
                 <NavigationMenuLink asChild>
                   <Link
-                    href="/"
+                    href="#inicio"
                     className="inline-flex items-center rounded-lg px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-400 data-[active]:bg-gray-100"
                   >
                     Início
@@ -53,7 +53,7 @@ export default function Navbar() {
               </NavigationMenuItem>
 
               {/* Serviços (dropdown) */}
-              <NavigationMenuItem>
+              {/* <NavigationMenuItem>
                 <NavigationMenuTrigger className="group inline-flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-400 data-[state=open]:bg-gray-100">
                   Serviços
                   <svg
@@ -93,7 +93,7 @@ export default function Navbar() {
                     />
                   </ul>
                 </NavigationMenuContent>
-              </NavigationMenuItem>
+              </NavigationMenuItem> */}
 
               {/* Projetos */}
               <NavigationMenuItem>
