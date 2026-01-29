@@ -1,8 +1,18 @@
-import { DoubleArrowDownIcon, PaperPlaneIcon } from "@radix-ui/react-icons";
+import { DoubleArrowDownIcon, Link2Icon } from "@radix-ui/react-icons";
 import { Button, Container } from "@radix-ui/themes";
 import Image from "next/image";
+import { useState } from "react";
 
-export default function SobreMimPage() {
+export default function HeroSection() {
+  const [copiado, setCopiado] = useState(false);
+
+  const copiarLink = () => {
+    navigator.clipboard.writeText(window.location.href);
+    setCopiado(true);
+
+    setTimeout(() => setCopiado(false), 2000);
+  };
+
   return (
     <Container id="inicio" className="scroll-mt-20">
       <section className="flex gap-8 items-center">
@@ -32,9 +42,19 @@ export default function SobreMimPage() {
                 Explore novas soluções
               </Button>
             </a>
-            <Button variant="outline" className="!cursor-pointer">
-              <PaperPlaneIcon />
-              Compartilhar
+            <Button
+              variant="outline"
+              className="!cursor-pointer transition-all duration-200"
+              onClick={copiarLink}
+            >
+              {copiado ? (
+                <>Link Copiado!</>
+              ) : (
+                <>
+                  <Link2Icon />
+                  Copiar Link
+                </>
+              )}
             </Button>
             {/* <Button>
               <LinkedInLogoIcon /> LinkedIn
