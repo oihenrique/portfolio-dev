@@ -1,9 +1,4 @@
-import {
-  CodeIcon,
-  GearIcon,
-  LightningBoltIcon,
-  RocketIcon,
-} from "@radix-ui/react-icons";
+import { CodeIcon, GearIcon, LightningBoltIcon } from "@radix-ui/react-icons";
 
 function handleAction() {
   console.log("click");
@@ -17,6 +12,7 @@ export const projectsInfo = [
       "Este projeto gera relatórios personalizados para várias lojas e gerentes diferentes a partir de uma lista de vendas canceladas e os envia por e-mail para cada uma, facilitando a análise por loja.",
     imagePath: "/automacao_relatorios.png",
     action: handleAction,
+    category: "automacao",
   },
   {
     id: 2,
@@ -25,6 +21,7 @@ export const projectsInfo = [
       "Criação de softwares para as mais diversas finalidades, como softwares de gestão, organização etc.",
     iconPath: <CodeIcon width={20} height={20} color="#fafafa" />,
     action: handleAction,
+    category: "sistemas",
   },
   {
     id: 3,
@@ -33,6 +30,7 @@ export const projectsInfo = [
       "Desenvolvimento de bots para gestão de conteúdos, assinaturas, disparo de notificações etc.",
     iconPath: <LightningBoltIcon width={20} height={20} color="#fafafa" />,
     action: handleAction,
+    category: "bots",
   },
   {
     id: 4,
@@ -41,5 +39,6 @@ export const projectsInfo = [
       "Desenvolvimento de scripts para automatizar tarefas repetitivas.",
     iconPath: <GearIcon width={20} height={20} color="#fafafa" />,
     action: handleAction,
+    category: "automacao",
   },
 ];
