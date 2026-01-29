@@ -1,9 +1,10 @@
 import { useState } from "react";
 import * as Select from "@radix-ui/react-select";
 import CardServicesWithPhoto from "./card-services-with-photo";
-import { Container } from "@radix-ui/themes";
+import { Container, Dialog } from "@radix-ui/themes";
 import Image from "next/image";
 import { projectsInfo } from "@/shared/projects-info";
+import ProjectModal from "./project-modal";
 
 export default function ProjectsSection() {
   const [servicoSelecionado, setServicoSelecionado] = useState("todos");
@@ -82,13 +83,18 @@ export default function ProjectsSection() {
 
           <div className="w-full lg:w-3/4 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
             {projetosFiltrados.map((s) => (
-              <CardServicesWithPhoto
-                key={s.id}
-                title={s.title}
-                description={s.description}
-                imagePath={s.imagePath ?? ""}
-                action={s.action}
-              />
+              <Dialog.Root key={s.id}>
+                <Dialog.Trigger>
+                  <div className="h-full">
+                    <CardServicesWithPhoto
+                      title={s.title}
+                      description={s.description}
+                      imagePath={s.imagePath ?? ""}
+                    />
+                  </div>
+                </Dialog.Trigger>
+                <ProjectModal project={s} />
+              </Dialog.Root>
             ))}
           </div>
         </div>
