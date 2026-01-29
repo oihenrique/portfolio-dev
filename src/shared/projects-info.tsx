@@ -11,56 +11,41 @@ export interface ProjectDetail {
   imagePath: string;
 }
 
-export const projectsInfo = [
+export const projectsInfo: ProjectDetail[] = [
   {
     id: 1,
-    title: "Automação de relatório",
+    title: "Automação de Relatórios para Lojas",
     description:
-      "Este projeto gera relatórios personalizados para várias lojas e gerentes diferentes a partir de uma lista de vendas canceladas e os envia por e-mail para cada uma, facilitando a análise por loja.",
+      "Geração e distribuição automatizada de relatórios de vendas canceladas para múltiplas filiais.",
     fullDescription:
-      "Desenvolvi uma solução que elimina a névoa operacional ao transformar dados brutos de vendas canceladas em relatórios estratégicos. O sistema centraliza informações de múltiplas unidades e as entrega diretamente aos gestores, garantindo precisão e economia de tempo real.",
+      "Projetei esta solução para uma rede com mais de 40 filiais que processava manualmente relatórios diários de cancelamentos. O script atua como um guia automático: integra-se ao ERP, extrai e processa os dados, gera relatórios personalizados por loja e os entrega diretamente aos gerentes via e-mail. O resultado foi a eliminação de erros manuais e a recuperação de horas produtivas, tudo operado através de uma interface simplificada.",
     category: "automacao",
     videoUrl: "dQw4w9WgXcQ",
-    technologies: ["Python", "Pandas", "SMTP"],
+    technologies: ["Python", "Pandas", "SMTP", "OpenPyXL"],
     imagePath: "/automacao_relatorios.png",
   },
   {
     id: 2,
-    title: "Desenvolvimento de software",
+    title: "Sistema de Reservas Sunset Hotel",
     description:
-      "Criação de softwares para as mais diversas finalidades, como softwares de gestão, organização etc.",
+      "Gerenciamento estruturado de clientes, quartos e fluxos de reservas hoteleiras.",
     fullDescription:
-      "Sistemas sólidos são o alicerce de qualquer negócio eficiente. Projeto arquiteturas personalizadas que organizam fluxos de trabalho complexos, removendo âncoras técnicas e permitindo que a empresa navegue com foco total em seus objetivos estratégicos.",
-    iconPath: <CodeIcon width={20} height={20} color="#fafafa" />,
+      "A essência do projeto Sunset Hotel foi estabelecer uma estrutura para gerenciar reservas de um hotel. Desenvolvido dentro do ecossistema Oracle One Next (Alura), o sistema organiza o fluxo de hóspedes, a disponibilidade de quartos e o controle de usuários.",
     category: "sistemas",
     videoUrl: "dQw4w9WgXcQ",
-    technologies: ["Python", "Pandas", "SMTP"],
-    imagePath: "/automacao_relatorios.png",
+    technologies: ["Java", "MySQL", "Swing"],
+    imagePath: "/assets/runningProjectHotel1.gif",
   },
   {
     id: 3,
-    title: "Bot para telegram",
+    title: "Bot de Curadoria de Vagas",
     description:
-      "Desenvolvimento de bots para gestão de conteúdos, assinaturas, disparo de notificações etc.",
+      "Agregador inteligente que monitora, filtra e centraliza oportunidades de emprego via Telegram.",
     fullDescription:
-      "Criei sentinelas digitais capazes de automatizar a interação e a gestão de comunidades. Estes bots dissipam a necessidade de intervenção manual constante, operando 24/7 para garantir que a informação e o atendimento cheguem ao destino sem ruídos.",
-    iconPath: <LightningBoltIcon width={20} height={20} color="#fafafa" />,
+      "Este bot foi concebido para dissipar o ruído na busca por oportunidades em diversas plataformas. Utilizando técnicas de web scraping e integração de APIs, ele monitora fontes distintas 24 horas por dia. O diferencial está no algoritmo de score, que filtra as vagas com precisão técnica antes de distribuí-las em canais específicos do Telegram. Uma solução que organiza vagas de diferentes áreas em um único serviço e distribui para diversos canais.",
     category: "bots",
     videoUrl: "dQw4w9WgXcQ",
-    technologies: ["Python", "Pandas", "SMTP"],
-    imagePath: "/automacao_relatorios.png",
-  },
-  {
-    id: 4,
-    title: "Automação de processos",
-    description:
-      "Desenvolvimento de scripts para automatizar tarefas repetitivas.",
-    fullDescription:
-      "A ineficiência é uma barreira invisível para o crescimento. Implementei scripts de automação que conectam ferramentas isoladas, permitindo que os dados fluam livremente e eliminando erros humanos em processos críticos de rotina.",
-    iconPath: <GearIcon width={20} height={20} color="#fafafa" />,
-    category: "automacao",
-    videoUrl: "dQw4w9WgXcQ",
-    technologies: ["Python", "Pandas", "SMTP"],
-    imagePath: "/automacao_relatorios.png",
+    technologies: ["Python", "Playwright", "Telegram API", "SQLite", "Docker"],
+    imagePath: "/assets/telegram-bot-vagas.png",
   },
 ];
