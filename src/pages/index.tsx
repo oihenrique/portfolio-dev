@@ -4,6 +4,7 @@ import ServicesSection from "@/components/services-section";
 import Footer from "@/components/footer";
 import ProjectsSection from "@/components/projects-section";
 import Head from "next/head";
+import ContactSection from "@/components/contact-section";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
           <ServicesSection />
         </div>
         <ProjectsSection />
+        <ContactSection />
         <div className="bg-primary-500">
           <Footer />
         </div>
