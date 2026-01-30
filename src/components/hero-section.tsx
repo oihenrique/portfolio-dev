@@ -20,7 +20,7 @@ export default function HeroSection() {
     <Container id="inicio" className="scroll-mt-20">
       <section className="flex flex-col lg:flex-row gap-8 items-center py-0 md:py-16 lg:py-32">
         <div className="text-center flex flex-col gap-2  lg:text-left order-2 lg:order-1">
-          <p className="text-sm md:text-md lg:text-xl font-medium text-gray-500">
+          <p className="text-sm md:text-base lg:text-xl font-medium text-gray-500">
             Olá, sou o{" "}
             <span className="font-bold text-secondary-500">Henrique</span>!
           </p>
@@ -28,7 +28,7 @@ export default function HeroSection() {
             Desenvolvo soluções que iluminam o caminho para o seu negócio
             crescer
           </h1>
-          <p className="text-gray-600 lg:text-start px-4 md:px-0 md:mx-auto lg:mx-0 md:text-md text-sm my-4 md:my-2 lg:mb-0 max-w-lg">
+          <p className="text-gray-600 lg:text-start px-4 md:px-0 md:mx-auto lg:mx-0 md:text-base text-sm my-4 md:my-2 lg:mb-0 max-w-lg">
             Acredito que a tecnologia seja um dos faróis que guiam empresas e
             pessoas em direção aos seus objetivos.{" "}
             <strong>

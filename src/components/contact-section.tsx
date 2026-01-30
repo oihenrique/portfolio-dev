@@ -25,19 +25,21 @@ export default function ContactSection() {
           <div className="flex flex-col sm:flex-row gap-4 w-full justify-center">
             <Button
               size="4"
-              className="!bg-secondary-500 hover:!bg-secondary-400 !text-white !cursor-pointer !rounded-xl !px-10 font-bold shadow-lg shadow-secondary-500/20 transition-all transform hover:-translate-y-1"
+              className="!bg-secondary-500 hover:!bg-secondary-400 !text-white !cursor-pointer !rounded-xl font-bold shadow-lg shadow-secondary-500/20 transition-all transform hover:-translate-y-1 !flex !items-center !justify-center !gap-2 !text-[16px] sm:!text-sm lg:!text-base !text-wrap"
               onClick={() =>
                 window.open("https://wa.me/+5583996124107", "_blank")
               }
             >
-              <ChatBubbleIcon width={20} height={20} />
+              <span className="leading-tight">
+                <ChatBubbleIcon width={20} height={20} className="shrink-0" />
+              </span>
               Iniciar conversa no WhatsApp
             </Button>
 
             <Button
               size="4"
               variant="outline"
-              className="!border-primary-200 !text-primary-500 hover:!bg-primary-50 !cursor-pointer !rounded-xl !px-10 transition-all"
+              className="!border-primary-200 !text-primary-500 hover:!bg-primary-50 !cursor-pointer !rounded-xl transition-all !flex !items-center !justify-center !gap-2 !text-[16px] sm:!text-sm lg:!text-base !text-wrap"
               onClick={() =>
                 (window.location.href = "mailto:oi.henriquegomes@gmail.com")
               }

@@ -1,6 +1,10 @@
 import * as Dialog from "@radix-ui/react-dialog";
-import { Cross2Icon } from "@radix-ui/react-icons";
-import { Button, Text, Heading, TextField, TextArea } from "@radix-ui/themes";
+import {
+  ChatBubbleIcon,
+  Cross2Icon,
+  PaperPlaneIcon,
+} from "@radix-ui/react-icons";
+import { Button, Text, Heading } from "@radix-ui/themes";
 import { ServiceDetail } from "@/shared/services-info";
 
 export default function ServiceModal({ service }: { service: ServiceDetail }) {
@@ -46,105 +50,51 @@ export default function ServiceModal({ service }: { service: ServiceDetail }) {
 
         <hr className="text-gray-300 my-4" />
 
-        {/* Formulário com a tag <form> semântica */}
-        <form
-          onSubmit={(e) => {
-            e.preventDefault();
-            console.log("Formulário submetido para:", service.title);
-          }}
-          className="flex flex-col gap-4 mt-6 p-4 sm:p-6 bg-gray-50 rounded-xl border border-primary-100/60"
-        >
-          <Heading size="3" className="text-primary-700 mb-2">
-            Solicitar uma proposta de projeto
-          </Heading>
-
-          <div className="space-y-4">
-            <div className="space-y-1">
-              <Text
-                as="label"
-                htmlFor="name"
-                size="2"
-                weight="medium"
-                className="text-primary-600"
-              >
-                Seu Nome ou Empresa *
-              </Text>
-              <TextField.Root
-                id="name"
-                name="name"
-                required
-                variant="surface"
-                className="!rounded-sm"
-              />
-            </div>
-
-            <div className="space-y-1">
-              <Text
-                as="label"
-                htmlFor="email"
-                size="2"
-                weight="medium"
-                className="text-primary-600"
-              >
-                E-mail *
-              </Text>
-              <TextField.Root
-                id="email"
-                name="email"
-                type="email"
-                required
-                variant="surface"
-                className="!rounded-sm"
-              />
-            </div>
-
-            <div className="space-y-1">
-              <Text
-                as="label"
-                htmlFor="deadline"
-                size="2"
-                weight="medium"
-                className="text-primary-600"
-              >
-                Prazo (Opcional)
-              </Text>
-              <TextField.Root
-                id="deadline"
-                name="deadline"
-                variant="surface"
-                className="!rounded-sm"
-              />
-            </div>
-
-            <div className="space-y-1">
-              <Text
-                as="label"
-                htmlFor="message"
-                size="2"
-                weight="medium"
-                className="text-primary-600"
-              >
-                Mensagem *
-              </Text>
-              <TextArea
-                id="message"
-                name="message"
-                required
-                className="min-h-[80px] !rounded-sm"
-              />
-            </div>
-            <div className="text-center text-sm">
-              <Button
-                type="submit"
-                className="!cursor-pointer !py-2 !p-3 !rounded-sm"
-                variant="solid"
-                color="teal"
-              >
-                Enviar solicitação
-              </Button>
-            </div>
+        {/* CTA */}
+        <div className="mt-8 p-6 bg-gray-50 rounded-2xl border border-primary-100/60 text-center space-y-6">
+          <div className="space-y-2">
+            <Heading size="4" className="text-primary-700">
+              Gostou desta solução?
+            </Heading>
+            <Text as="p" className="text-gray-700 text-sm">
+              Inicie uma conversa agora para alinhar os detalhes do seu projeto.
+            </Text>
           </div>
-        </form>
+
+          <div className="flex flex-col gap-3">
+            {/* WhatsApp */}
+            <Button
+              size="3"
+              className="!bg-secondary-500 !text-white !cursor-pointer !rounded-lg font-bold shadow-md hover:!bg-secondary-400 transition-all !w-64 md:!w-md !px-6 !py-3 !mx-auto !flex !items-center !justify-center !gap-2 !text-[10px] sm:!text-sm lg:!text-base !text-wrap"
+              onClick={() =>
+                window.open(
+                  `https://wa.me/5583996124107?text=Olá Henrique! Gostaria de saber mais sobre: ${service.title}`,
+                  "_blank",
+                )
+              }
+            >
+              <ChatBubbleIcon width={16} height={16} className="shrink-0" />
+              <span className="leading-tight">
+                Falar sobre {service.title} agora
+              </span>
+            </Button>
+
+            {/* E-mail Direto */}
+            <Button
+              size="3"
+              variant="outline"
+              className="!border-1 !border-primary-200 !text-primary-500 !cursor-pointer !rounded-lg hover:!bg-primary-50 transition-all !w-64 md:!w-md !px-6 !py-3 !mx-auto !flex !items-center !justify-center !gap-2 !text-[10px] sm:!text-sm lg:!text-base !text-wrap"
+              onClick={() =>
+                (window.location.href = `mailto:oi.henriquegomes@gmail.com?subject=Proposta: ${service.title}`)
+              }
+            >
+              <PaperPlaneIcon width={16} height={16} className="shrink-0" />
+              <span className="leading-tight">
+                Solicitar proposta por e-mail
+              </span>
+            </Button>
+          </div>
+        </div>
       </Dialog.Content>
     </Dialog.Portal>
   );
