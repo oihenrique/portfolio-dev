@@ -26,7 +26,9 @@ export default function ContactSection() {
             <Button
               size="4"
               className="!bg-secondary-500 hover:!bg-secondary-400 !text-white !cursor-pointer !rounded-xl !px-10 font-bold shadow-lg shadow-secondary-500/20 transition-all transform hover:-translate-y-1"
-              onClick={() => window.open("https://wa.me/83996124107", "_blank")}
+              onClick={() =>
+                window.open("https://wa.me/+5583996124107", "_blank")
+              }
             >
               <ChatBubbleIcon width={20} height={20} />
               Iniciar conversa no WhatsApp

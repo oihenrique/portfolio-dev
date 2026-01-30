@@ -18,17 +18,17 @@ export default function HeroSection() {
 
   return (
     <Container id="inicio" className="scroll-mt-20">
-      <section className="flex gap-8 items-center">
-        <div className="flex flex-col gap-2">
-          <p className="text-lg font-medium text-gray-500">
+      <section className="flex flex-col lg:flex-row gap-8 items-center py-0 md:py-16 lg:py-32">
+        <div className="text-center flex flex-col gap-2  lg:text-left order-2 lg:order-1">
+          <p className="text-sm md:text-md lg:text-xl font-medium text-gray-500">
             Olá, sou o{" "}
             <span className="font-bold text-secondary-500">Henrique</span>!
           </p>
-          <h1 className="text-4xl font-bold text-gray-700">
+          <h1 className="text-center lg:text-start text-2xl md:text-3xl lg:text-3xl max-w-lg md:max-w-xl lg:max-w-7xl  font-bold text-gray-700">
             Desenvolvo soluções que iluminam o caminho para o seu negócio
             crescer
           </h1>
-          <p className="text-gray-600">
+          <p className="text-gray-600 lg:text-start px-4 md:px-0 md:mx-auto lg:mx-0 md:text-md text-sm my-4 md:my-2 lg:mb-0 max-w-lg">
             Acredito que a tecnologia seja um dos faróis que guiam empresas e
             pessoas em direção aos seus objetivos.{" "}
             <strong>
@@ -38,7 +38,7 @@ export default function HeroSection() {
             Minha missão é garantir que você navegue com segurança, clareza e
             eficiência.
           </p>
-          <div className="flex gap-4 mt-2 ">
+          <div className="flex flex-wrap gap-4 mt-2 justify-center lg:justify-start">
             <a href="#servicos">
               <Button className="!cursor-pointer">
                 <DoubleArrowDownIcon />
@@ -68,12 +68,13 @@ export default function HeroSection() {
             </Button> */}
           </div>
         </div>
-        <div className="max-w-2xl w-full">
+        <div className="max-w-xs lg:max-w-2xl w-full order-1 lg:order-2">
           <Image
             src={`${prefix}/HTC_Heritage Library_Nautical Nation 02Element 6.png`}
             width={400}
             height={400}
             alt="Desenho de um farol"
+            className="mx-auto"
           />
           <p className="text-center text-xs text-gray-400 mt-2">
             Designed by{" "}

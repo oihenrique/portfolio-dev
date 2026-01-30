@@ -74,8 +74,8 @@ export default function ProjectsSection() {
           </div>
         </div>
 
-        <div className="flex items-center">
-          <div className="hidden lg:block w-1/4 px-4 mr-12">
+        <div className="flex flex-col lg:flex-row items-center">
+          <div className="hidden xl:block w-1/4 px-4 mr-12 sticky top-24">
             <Image
               src={`${prefix}/HTC_Heritage Library_Nautical Nation 02Element 1.png`}
               width={250}
@@ -84,7 +84,7 @@ export default function ProjectsSection() {
             />
           </div>
 
-          <div className="w-full lg:w-3/4 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+          <div className="w-full text-center xl:w-3/4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-4 lg:max-w-4xl max-w-lg">
             {projetosFiltrados.map((s) => (
               <Dialog.Root key={s.id}>
                 <Dialog.Trigger>

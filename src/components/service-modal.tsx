@@ -7,7 +7,7 @@ export default function ServiceModal({ service }: { service: ServiceDetail }) {
   return (
     <Dialog.Portal>
       <Dialog.Overlay className="fixed inset-0 bg-black/50 backdrop-blur-xs z-50" />
-      <Dialog.Content className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-xl bg-background p-8 rounded-2xl shadow-xl z-50 focus:outline-none max-h-[90vh] overflow-y-auto">
+      <Dialog.Content className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[95vw] max-w-xl bg-background p-5 sm:p-8 rounded-2xl shadow-xl z-50 focus:outline-none max-h-[95vh] overflow-y-auto">
         {/* Cabeçalho */}
         <div className="flex justify-between items-center">
           <Dialog.Title className="text-xl">
@@ -31,7 +31,7 @@ export default function ServiceModal({ service }: { service: ServiceDetail }) {
           <Text as="p" weight="bold" className="text-primary-500">
             Benefícios:
           </Text>
-          <ul className="grid grid-cols-3 text-sm text-gray-700">
+          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-2 text-sm text-gray-700">
             {service.benefits.map((benefit, i) => (
               <li
                 key={i}
@@ -52,7 +52,7 @@ export default function ServiceModal({ service }: { service: ServiceDetail }) {
             e.preventDefault();
             console.log("Formulário submetido para:", service.title);
           }}
-          className="flex flex-col gap-4 mt-6 p-6 bg-gray-50 rounded-xl border border-primary-100/60"
+          className="flex flex-col gap-4 mt-6 p-4 sm:p-6 bg-gray-50 rounded-xl border border-primary-100/60"
         >
           <Heading size="3" className="text-primary-700 mb-2">
             Solicitar uma proposta de projeto

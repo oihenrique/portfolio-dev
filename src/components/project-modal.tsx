@@ -7,11 +7,11 @@ export default function ProjectModal({ project }: { project: ProjectDetail }) {
   return (
     <Dialog.Portal>
       <Dialog.Overlay className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50" />
-      <Dialog.Content className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90vw] max-w-2xl bg-[#FAF3F3] p-6 rounded-2xl shadow-xl z-50 focus:outline-none max-h-[90vh] overflow-y-auto">
+      <Dialog.Content className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[95vw] sm:w-[90vw] max-w-2xl bg-[#FAF3F3] p-4 sm:p-6 rounded-2xl shadow-xl z-50 focus:outline-none max-h-[90vh] overflow-y-auto">
         {/* Cabeçalho */}
-        <div className="flex justify-between items-center mb-4">
+        <div className="flex justify-between items-start mb-4">
           <Dialog.Title>
-            <Heading size="6" className="text-primary-500">
+            <Heading size="6" className="text-primary-500 pr-4">
               {project.title}
             </Heading>
           </Dialog.Title>

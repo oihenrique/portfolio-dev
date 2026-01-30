@@ -10,13 +10,12 @@ export default function ServicesSection() {
         <h2 className="text-2xl text-background text-center font-bold">
           Serviços disponíveis
         </h2>
-        <div className="grid grid-rows-1 grid-cols-4 gap-4">
+        <div className="mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-4 gap-x-8 justify-items-center lg:max-w-6xl max-w-lg">
           {servicesInfo.map((s) => (
             <Dialog.Root key={s.id}>
               <Dialog.Trigger>
                 <div>
                   {" "}
-                  {/* Wrapper para o gatilho */}
                   <CardServices
                     title={s.title}
                     description={s.description}
